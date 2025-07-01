@@ -1,0 +1,81 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "heading": "1.Love Forever",
+      "description": "Love Forever is a beautiful story which tells about interesting things which happens around Feb 14 Valentines Day, to a group of friends in college",
+      "link": "https://youtu.be/aksQ1n5fPaY?list=PL2kpOp_flTV5l4XBVG9YUkd5d9BBCdssa",
+      "image": "images/love-forever.gif"
+    },
+    {
+      "id": 2,
+      "heading": "2.AAA",
+      "description": "AAA is an anthological film which revolves around two youngsters, unfortunate conditions force them to involve in a situation which drags them to a big trouble",
+      "link": "https://youtu.be/nW8Eqxzsnjc?list=PL2kpOp_flTV4DEa5vjJjjRcyjijN55jev",
+      "image": "images/aaa.gif"
+    },
+    {
+      "id": 3,
+      "heading": "3.Dhadaladi",
+      "description": "Dhadaladi is a comedy film which happens in one night in an hostel. A small fight leads to big chaos and it unravels mystries around the hostel",
+      "link": "https://drive.google.com/file/d/1Ou5RRS0xNVjiGEdrfKvLDIET9rKl6b2o/view?usp=sharing",
+      "image": "images/dadaladi.gif"
+    }
+  ],
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Kabilan",
+      "image": "images/kabilan.jpg",
+      "roles": ["Director", "Editor", "Actor"]
+    },
+    {
+      "id": 2,
+      "name": "Sharan",
+      "image": "images/sharan.jpg",
+      "roles": ["Director", "Editor", "Actor"]
+    },
+    {
+      "id": 3,
+      "name": "Sidharth",
+      "image": "images/sidharth.jpg",
+      "roles": ["Cameraman", "Actor", "Dialogues"]
+    },
+    {
+      "id": 4,
+      "name": "Akshay",
+      "image": "images/akshay.jpg",
+      "roles": ["Cameraman", "Actor", "Dialogues"]
+    }
+  ],
+  "contactInfo": [
+    {
+      "iconClass": "fas fa-globe",
+      "text": "hopelessfilmies.com",
+      "isLink": false
+    },
+    {
+      "iconClass": "fas fa-phone",
+      "text": "(123)456-78910",
+      "isLink": false
+    },
+    {
+      "iconClass": "fab fa-facebook-f",
+      "text": "Facebook",
+      "link": "#",
+      "isLink": true
+    },
+    {
+      "iconClass": "fab fa-instagram",
+      "text": "Instagram",
+      "link": "#",
+      "isLink": true
+    },
+    {
+      "iconClass": "fab fa-twitter",
+      "text": "Twitter",
+      "link": "#",
+      "isLink": true
+    }
+  ]
+}

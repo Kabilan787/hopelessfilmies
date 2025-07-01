@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using HopelessFilmiesMVC.Data
+
+<main>
+    <section class="intro-section">
+        <div class="section-content">
+            <div class="intro-details">
+                <h1 class="title">Only for Filmies!</h1>
+                <h2 class="subtitle">
+                    Welcome to our website where
+                    you can find interesting and exciting short films
+                    to make your day&#127871;&#127871;&#127871;
+                </h2>
+            </div>
+            <div class="intro-image-wrapper">
+                <img src="~/images/hopeless.gif" alt="Logo" class="intro-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-details">
+                <h1 class="about-title">About Us!&#128170;</h1>
+                <h2 class="about-subtitle">
+                    We are group of engineering students
+                    who are interested in film-making.Through efficient team work
+                    and segregating the tasks among us we have made some good films
+                    during our college time.Hope you enjoy it!
+                </h2>
+                <div class="social-links">
+                    <!-- Added id for JS targeting for interactive effect -->
+                    <a href="#" class="social-link facebook" id="facebookLink" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link instagram" id="instagramLink" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link twitter" id="twitterLink" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="~/images/about.jpg" alt="About" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="films" id="films">
+        <h1 class="film-titles">Our Films</h1>
+        <div id="filmsContainer">
+            @{
+                var films = StaticDataStore.Films;
+            }
+            @foreach (Film item in films)
+            {
+                <div class="film">
+                    <div class="film-details">
+                        <h1 class="film-heading">@item.Heading</h1>
+                        <h2 class="film-description">@item.Description</h2>
+                        <a class="watch-link" href="@item.Link">Watch it here!</a>
+                    </div>
+                    <div class="film-wrapper">
+                        <img src="@item.Image" alt="Love Forever" class="film-recap">
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+
+    <section class="team-members" id="members">
+        <h1 class="members-title">Team Members</h1>
+        <div class="members-content">
+            <div class="slider-container" id="membersSliderContainer">
+                <button class="nav-arrow left-arrow" id="prevMemberBtn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-inner" id="carouselInner">
+                    <!-- Team members will be dynamically loaded here by script.js -->
+                    @{
+                        var members = StaticDataStore.TeamMembers;
+                    }
+                    @foreach (TeamMember item in members)
+                    {
+                        <div class="carousel-item">
+                            <li class="members">
+                                <img src="@item.Image" alt="Member" class="member-image">
+                                <h2 class="name">@item.Name</h2>
+                                <ul class="roles">
+                                    @foreach (string role in item.Roles)
+                                    {
+                                       <li>@role</li> 
+                                    }
+                                    
+                                </ul>
+                            </li>
+                        </div>
+                    }
+                    
+                </div>
+                <button class="nav-arrow right-arrow" id="nextMemberBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+</main>
+
